@@ -1,13 +1,15 @@
-# CPCL
-This repository will hold the PyTorch implementation of the JBHI'22 paper [All-around real label supervision: Cyclic prototype consistency learning for semi-supervised medical image segmentation](https://ieeexplore.ieee.org/abstract/document/9741294). This is an extended implementation for the LA benchmark.
+# CVCL
+This repository will hold the PyTorch implementation of the JBHI'22 paper [3D medical image segmentation based on prototype-guided voxel contrast learning](). This is an extended implementation for the LA benchmark.
 
 ## Introduction
 ### Abstract
-Semi-supervised learning has substantially advanced medical image segmentation since it alleviates the heavy burden of acquiring costly expert-examined annotations. Especially, the consistency-based approaches have attracted more attention for their superior performance, wherein the real labels are only utilized to supervise their paired images via supervised loss while the unlabeled images are exploited by enforcing the perturbation-based “unsupervised” consistency without explicit guidance from those real labels. However, intuitively, the expert-examined real labels contain more reliable supervision signals. Observing this, we ask an unexplored but interesting question: can we exploit the unlabeled data via explicit real-label supervision for semi-supervised training? To this end, we discard the previous perturbation-based consistency but absorb the essence of non-parametric prototype learning. Based on the prototypical networks, we then propose a novel cyclic prototype consistency learning (CPCL) framework, which is constructed by a labeled-to-unlabeled (L2U) prototypical forward process and an unlabeled-to-labeled (U2L) backward process. Such two processes synergistically enhance the segmentation network by encouraging more discriminative and compact features. In this way, our framework turns previous “unsupervised” consistency into new “supervised” consistency, obtaining the “all-around real label supervision” property of our method. 
+Semi-supervised learning significantly drives the development of medical image segmentation and alleviating the burden of obtaining high-cost expert annotation. In particular, methods based on contrast learning have much attention due to their excellent performance. Such methods not only explore the semantic information in the local context of a single image, but also capture the global semantic information of small batches or even the whole dataset. However, existing image-level and region-level contrast learning fail to fully consider the processing of fuzzy voxels in target boundaries when refining segmentation. Example-level contrast learning mainly generates different views of the same image through data enhancement to select positive and negative sample pairs, so as to improve the differentiation between categories, but also ignores the global information or context information between samples, that is, the rich semantic relationship between pixels of different images. Moreover, in medical images, strong data augmentation may introduce excessive bias due to its boundary details and sensitivity to construct ideal sample similarity relationships. For the above problems, inspired by the progress in unsupervised contrast representation learning, we propose a new method that focuses on the boundary voxels of segmented targets and mining key voxels around the segmented targets in different samples to construct pixel-wise contrast learning sample pairs for semi-supervised medical image segmentation. Moreover, the current prototype learning method learns a meaningful feature representation through the similarity measurement when data annotation is scarce, enabling the model to perform better in subsequent segmentation tasks. Based on this observation, we propose a novel target voxel screening scheme to select the most valuable difficult positive and difficult negative samples in the different sample segmentation boundaries for contrast learning through the similarity of voxel features to the category prototype. To achieve this goal, we have constructed a new class-level prototype contrast learning (PCL) and voxel-level prototype contrast learning (VCL) framework. This framework screens the difference part of the predicted model by labeling the prototype metric and builds the contrast learning pairs as a negative sample voxel. These two processes work together to encourage feature discriminability and compactness, thus enhancing the performance of the segmentation network. The code is viewed on the https://github.com/maybeQi/Voxel-Contrastive. 
 
 ### Highlights
-- Utilize prototype-based label prediction to achieve "real-label learning" for unlabeled data.
+- Utilize prototype-based measure  to achieve "voxel learning" for unlabeled data.
 
+![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/%E5%9B%BE%E7%89%871.png)
+![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/%E5%9B%BE%E7%89%872.png)
 
 ## Requirements
 Check requirements.txt.
@@ -18,7 +20,7 @@ Check requirements.txt.
 
 1. Clone the repo:
 ```
-cd ./CPCL
+cd ./CVCL
 ```
 
 2. Data Preparation
