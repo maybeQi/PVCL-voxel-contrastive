@@ -1,5 +1,5 @@
 # CVCL
-This repository will hold the PyTorch implementation of the  paper [3D medical image segmentation based on prototype-guided voxel contrast learning](). This is an extended implementation for the LA benchmark.
+This repository will hold the PyTorch implementation of the  paper [3D medical image segmentation based on prototype-guided voxel contrast learning](). This is an extended implementation for the LA and BraTS benchmark.
 
 ## Introduction
 ![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/%E5%9B%BE%E7%89%871.png)
@@ -16,6 +16,8 @@ Check requirements.txt.
 * Pytorch version >=0.4.1.
 * Python == 3.6 
 
+## Datesets
+Will put them on a public web disk or contact me
 ## Usage
 
 1. Clone the repo:
