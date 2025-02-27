@@ -2,15 +2,15 @@
 This repository will hold the PyTorch implementation of the  paper [In order to prevent this part in the check, we temporarily do hiding](). This is an extended implementation for the LA ，BraTS19 and KiT19 benchmark.
 
 ## Introduction
-![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/780e00fd27851e6580ddf510855e2ab.png)
+![image](https://github.com/maybeQi/PVCL-voxel-Contrastive/blob/main/image/abstract.png)
 ### Abstract
 In order to prevent this part in the check, we temporarily do hiding...
-![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/图片1.png)
+![image](https://github.com/maybeQi/PVCL-voxel-Contrastive/blob/main/image/fig1.png)
 
 ### Highlights
 - Utilize prototype-based measure  to achieve "voxel learning" for unlabeled data.
 
-![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/图片2.png)
+![image](https://github.com/maybeQi/PVCL-voxel-Contrastive/blob/main/image/fig2.png)
 
 ## Requirements
 Check requirements.txt.
