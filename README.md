@@ -1,5 +1,5 @@
-# CVCL
-This repository will hold the PyTorch implementation of the  paper [In order to prevent this part in the check, we temporarily do hiding](). This is an extended implementation for the LA and BraTS benchmark.
+# PVCL
+This repository will hold the PyTorch implementation of the  paper [In order to prevent this part in the check, we temporarily do hiding](). This is an extended implementation for the LA ，BraTS19 and KiT19 benchmark.
 
 ## Introduction
 ![image](https://github.com/maybeQi/Voxel-Contrastive/blob/master/image/780e00fd27851e6580ddf510855e2ab.png)
